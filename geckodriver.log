@@ -1,0 +1,99 @@
+1687637690835	geckodriver	INFO	Listening on 127.0.0.1:63905
+1687637693892	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63906" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofileLyQGAm"
+1687637699162	geckodriver	INFO	Listening on 127.0.0.1:63928
+1687637702182	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63929" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofileThV4YT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687637702980	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687637702991	Marionette	INFO	Listening on port 63938
+Read port: 63938
+WebDriver BiDi listening on ws://127.0.0.1:63929
+1687637703238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63929/devtools/browser/201e87d7-318b-4258-b05c-745cf0984263
+[Parent 3180, IPC I/O Parent] WARNING: ConnectNamedPipe timed out!: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:327
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 3180, IPC I/O Parent] WARNING: ConnectNamedPipe timed out!: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:327
+[Parent 3180, IPC I/O Parent] WARNING: ConnectNamedPipe timed out!: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:327
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1687637715504	Marionette	INFO	Stopped listening on port 63938
+Dynamically enable window occlusion 1
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1687637735265	geckodriver	INFO	Listening on 127.0.0.1:64028
+1687637738332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64029" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofileKEfouc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687637738895	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687637738903	Marionette	INFO	Listening on port 64038
+Read port: 64038
+WebDriver BiDi listening on ws://127.0.0.1:64029
+1687637739124	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64029/devtools/browser/f84b54e3-e999-445f-a87d-6b5f3a457cae
+1687637761829	Marionette	INFO	Stopped listening on port 64038
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64079" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofilekPRyyI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687637750471	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687637750482	Marionette	INFO	Listening on port 64088
+Read port: 64088
+WebDriver BiDi listening on ws://127.0.0.1:64079
+1687637750716	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64079/devtools/browser/4afd4a82-bb48-4700-9965-b8fccfaed711
+1687637763108	Marionette	INFO	Stopped listening on port 64088
+Dynamically enable window occlusion 1
+[Parent 5428, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:593
+1687638125197	geckodriver	INFO	Listening on 127.0.0.1:64458
+1687638128232	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64459" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofile1niFAz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687638129051	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687638129059	Marionette	INFO	Listening on port 64467
+Read port: 64467
+WebDriver BiDi listening on ws://127.0.0.1:64459
+1687638129316	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64459/devtools/browser/f95b0665-0079-4ec8-8a64-ffd5d5f92740
+1687638158079	Marionette	INFO	Stopped listening on port 64467
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: (new Error("IndexedDB: main/url-classifier-skip-urls list() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.jsm", 18))
+ttings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687638141748	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687638141759	Marionette	INFO	Listening on port 64521
+Read port: 64521
+WebDriver BiDi listening on ws://127.0.0.1:64512
+1687638142026	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64512/devtools/browser/03732641-3a8a-4837-9b60-fcbb349c655c
+1687638156928	Marionette	INFO	Stopped listening on port 64521
+Dynamically enable window occlusion 1
+1687638417145	geckodriver	INFO	Listening on 127.0.0.1:64712
+1687638420144	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64713" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofileizGG3V"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687638420976	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687638420982	Marionette	INFO	Listening on port 64722
+Read port: 64722
+WebDriver BiDi listening on ws://127.0.0.1:64713
+1687638421190	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64713/devtools/browser/a1ac62d7-ea84-4cff-8ecc-d78b9cf385a6
+1687638426495	Marionette	INFO	Stopped listening on port 64722
+Dynamically enable window occlusion 1
+1687638434469	geckodriver	INFO	Listening on 127.0.0.1:64810
+1687638437499	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64811" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Murkotik\\AppData\\Local\\Temp\\rust_mozprofileRorUV9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687638438128	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687638438134	Marionette	INFO	Listening on port 64820
+Read port: 64820
+WebDriver BiDi listening on ws://127.0.0.1:64811
+1687638438332	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64811/devtools/browser/91f4aa35-a16b-49c3-ba45-357d110a5a4a
+1687638443996	Marionette	INFO	Stopped listening on port 64820
+Dynamically enable window occlusion 1
