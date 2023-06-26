@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from constants.home_page import HomePageConstants
 from pages.base_page import BasePage
 
@@ -18,5 +20,25 @@ class HomePage(BasePage):
 
     def verify_logo_at_home_page(self):
         """Verify logo is visible on the home page"""
-
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGO_XPATH)
         assert self.is_element_visible(xpath=self.const.LOGO_XPATH)
+
+    def verify_category_title_is_clickable(self):
+        """Verify category's title is clickable"""
+        self.wait_until_clickable(by=By.XPATH, xpath=self.const.CATEGORY_PROPERTY_TITLE_XPATH)
+        assert self.is_element_clickable(xpath=self.const.CATEGORY_PROPERTY_TITLE_XPATH)
+
+    def verify_category_image_is_clickable(self):
+        """Verify category's image is clickable"""
+        self.wait_until_clickable(by=By.XPATH, xpath=self.const.CATEGORY_PROPERTY_IMG_XPATH)
+        assert self.is_element_clickable(xpath=self.const.CATEGORY_PROPERTY_IMG_XPATH)
+
+    def verify_footer_is_displayed_on_the_home_page(self):
+        """Verify that the footer is presented on the home page"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.FOOTER_XPATH)
+        assert self.is_element_visible(xpath=self.const.FOOTER_XPATH)
+
+    def verify_header_is_displayed_on_the_home_page(self):
+        """Verify that the header is presented on the home page"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEADER_XPATH)
+        assert self.is_element_visible(xpath=self.const.HEADER_XPATH)
