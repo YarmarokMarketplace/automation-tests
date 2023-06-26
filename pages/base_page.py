@@ -51,6 +51,25 @@ class BasePage:
         except (TimeoutError, NoSuchElementException):
             return False
 
+    def is_element_clickable(self, xpath):
+        """Check if element is clickable"""
+        try:
+            element = self.driver.find_element(by=By.XPATH, value=xpath)
+            return element.is_enabled() and element.is_displayed()
+        except (TimeoutError, NoSuchElementException):
+            return False
+
+        # try:
+        #     self.wait_until_clickable(by=By.XPATH, xpath=xpath).click()
+        #     return True
+        # except (TimeoutError, NoSuchElementException):
+        #     return False
+        # try:
+        #     self.driver.find_element(by=By.XPATH, value=xpath).is_enabled()
+        #     return True
+        # except NoSuchElementException:
+        #     return False
+
     def fill_fields(self, xpath, value):
         """Fill the fields using provided values"""
         field = self.wait_until_clickable(by=By.XPATH, xpath=xpath)
