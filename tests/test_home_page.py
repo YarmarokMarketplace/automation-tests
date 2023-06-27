@@ -18,7 +18,7 @@ class TestHomePage:
         # Verify categories at the home page
         home_page.verify_categories_are_at_the_home_page()
 
-    def test_mar72_marketplace_logo_on_the_home_page(self, home_page):  # Todo: чомусь падає
+    def test_mar72_marketplace_logo_on_the_home_page(self, home_page):
         """
         - Steps:
             - open home page (fixture)
@@ -28,7 +28,7 @@ class TestHomePage:
         # Verify logo at home page
         home_page.verify_logo_at_home_page()
 
-    def test_mar76_clicking_on_the_category_title(self, home_page):  # Todo: чомусь падає
+    def test_mar76_clicking_on_the_category_title(self, home_page):
         """
         - Steps:
             - open page (fixture)

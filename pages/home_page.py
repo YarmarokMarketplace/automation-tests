@@ -20,7 +20,7 @@ class HomePage(BasePage):
 
     def verify_logo_at_home_page(self):
         """Verify logo is visible on the home page"""
-        self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGO_XPATH)
+        # self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGO_XPATH)
         assert self.is_element_visible(xpath=self.const.LOGO_XPATH)
 
     def verify_category_title_is_clickable(self):
