@@ -42,3 +42,16 @@ class HomePage(BasePage):
         """Verify that the header is presented on the home page"""
         self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEADER_XPATH)
         assert self.is_element_visible(xpath=self.const.HEADER_XPATH)
+
+    def check_all_needed_articles_are_displayed_in_footer(self, article):
+        """Check and verify all articles are present in the footer"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.FOOTER_XPATH)
+
+        if article == self.const.TERMS_OF_USE_UKR_TEXT:
+            assert self.is_element_clickable(xpath=self.const.TERMS_OF_USE_UKR_XPATH)
+        elif article == self.const.SECURITY_POLICY_UKR_TEXT:
+            assert self.is_element_clickable(xpath=self.const.SECURITY_POLICY_UKR_XPATH)
+        elif article == self.const.HOW_TO_SELL_AND_BUY_UKR_TEXT:
+            assert self.is_element_clickable(xpath=self.const.HOW_TO_SELL_AND_BUY_UKR_XPATH)
+        elif article == self.const.SITE_MAP_UKR_TEXT:
+            assert self.is_element_clickable(xpath=self.const.SITE_MAP_UKR_XPATH)
