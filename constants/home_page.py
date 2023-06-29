@@ -6,8 +6,31 @@ class HomePageConstants:
 
     LOGO_XPATH = './/img[@class="css-ufscxh"]'
 
+    CATEGORY_CHILDREN_WORLD_IMG_XPATH = './/img[@class="css-73nay0"]'
     CATEGORY_PROPERTY_IMG_XPATH = './/img[@class="css-73nay0"]'
+    CATEGORY_CAR_IMG_XPATH = ''
+    CATEGORY_TRANSPORT_IMG_XPATH = ''
+    CATEGORY_PETS_IMG_XPATH = ''
+    CATEGORY_HOME_IMG_XPATH = ''
+    CATEGORY_WORK_IMG_XPATH = ''
+    CATEGORY_BUSINESS_IMG_XPATH = ''
+    CATEGORY_FASHION_IMG_XPATH = ''
+    CATEGORY_RELAX_IMG_XPATH = ''
+    CATEGORY_ELECTRO_IMG_XPATH = ''
+
+    CATEGORY_CHILDREN_WORLD_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Дитячий світ"]'
     CATEGORY_PROPERTY_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Нерухомість"]'
+    CATEGORY_CAR_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Авто"]'
+    CATEGORY_TRANSPORT_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Запчастини для транспорту"]'
+    CATEGORY_PETS_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Тварини"]'
+    CATEGORY_HOME_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Дім і сад"]'
+    CATEGORY_WORK_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Робота"]'
+    CATEGORY_BUSINESS_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Бізнес та послуги"]'
+    CATEGORY_FASHION_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Мода і стиль"]'
+    CATEGORY_RELAX_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Хобі, відпочинок і спорт"]'
+    CATEGORY_ELECTRO_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Електроніка"]'
+
+    CATEGORY_ALL_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Переглянути всі"]'
 
     HEADER_XPATH = './/div[@class="MuiToolbar-root MuiToolbar-regular css-1cmqiah-MuiToolbar-root"]'
     FOOTER_XPATH = './/footer'

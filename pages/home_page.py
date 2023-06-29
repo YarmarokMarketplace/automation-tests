@@ -23,10 +23,10 @@ class HomePage(BasePage):
         # self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGO_XPATH)
         assert self.is_element_visible(xpath=self.const.LOGO_XPATH)
 
-    def verify_category_title_is_clickable(self):
+    def verify_category_title_is_clickable(self, title_button):
         """Verify category's title is clickable"""
-        self.wait_until_clickable(by=By.XPATH, xpath=self.const.CATEGORY_PROPERTY_TITLE_XPATH)
-        assert self.is_element_clickable(xpath=self.const.CATEGORY_PROPERTY_TITLE_XPATH)
+        self.wait_until_clickable(by=By.XPATH, xpath=title_button)
+        assert self.is_element_clickable(xpath=title_button)
 
     def verify_category_image_is_clickable(self):
         """Verify category's image is clickable"""
