@@ -9,7 +9,7 @@ class HomePageConstants:
     CATEGORY_CHILDREN_WORLD_IMG_XPATH = './/img[@class="css-73nay0"]'
     CATEGORY_PROPERTY_IMG_XPATH = './/img[@class="css-73nay0"]'
     CATEGORY_CAR_IMG_XPATH = ''
-    CATEGORY_TRANSPORT_IMG_XPATH = ''
+    CATEGORY_TRANSPORT_IMG_XPATH = ''  # ToDo: add images xpathes when it will be implemented
     CATEGORY_PETS_IMG_XPATH = ''
     CATEGORY_HOME_IMG_XPATH = ''
     CATEGORY_WORK_IMG_XPATH = ''
