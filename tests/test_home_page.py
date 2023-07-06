@@ -9,6 +9,9 @@ from constants.home_page import HomePageConstants
 class TestHomePage:
     """Stores tests for home page functionality"""
 
+    def test_api_get_all_categories(self, home_page):
+        home_page.check_api_request()
+
     def test_mar152_home_page_is_the_first_page_that_visitors_see(self, home_page):
         """
         - Steps:

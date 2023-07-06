@@ -1,6 +1,8 @@
 class HomePageConstants:
     """Stores  constants related to home page"""
 
+    API_URL = "https://deploy-preview-1--yarmarok-test.netlify.app/"
+
     CATEGORIES_XPATH = './/h4[@class="MuiTypography-root MuiTypography-h4 css-ob4nwx-MuiTypography-root"]'
     CATEGORIES_TEXT = 'Головні рубрики'
 
@@ -29,6 +31,18 @@ class HomePageConstants:
     CATEGORY_FASHION_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Мода і стиль"]'
     CATEGORY_RELAX_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Хобі, відпочинок і спорт"]'
     CATEGORY_ELECTRO_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Електроніка"]'
+
+    CATEGORY_CHILDREN_WORLD_TITLE_TEXT = "Дитячий світ"
+    CATEGORY_PROPERTY_TITLE_TEXT = "Нерухомість"
+    CATEGORY_CAR_TITLE_TEXT = "Авто"
+    CATEGORY_TRANSPORT_TITLE_TEXT = "Запчастини для транспорту"
+    CATEGORY_PETS_TITLE_TEXT = "Тварини"
+    CATEGORY_HOME_TITLE_TEXT = "Дім і сад"
+    CATEGORY_WORK_TITLE_TEXT = "Робота"
+    CATEGORY_BUSINESS_TITLE_TEXT = "Бізнес та послуги"
+    CATEGORY_FASHION_TITLE_TEXT = "Мода і стиль"
+    CATEGORY_RELAX_TITLE_TEXT = 'Хобі, відпочинок і спорт'
+    CATEGORY_ELECTRO_TITLE_TEXT = ''
 
     CATEGORY_ALL_TITLE_XPATH = './/a[@class="css-9zxssz" and text()="Переглянути всі"]'
 

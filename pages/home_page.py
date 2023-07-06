@@ -1,3 +1,4 @@
+import requests
 from selenium.webdriver.common.by import By
 
 from constants.home_page import HomePageConstants
@@ -10,6 +11,11 @@ class HomePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.const = HomePageConstants
+
+    def check_api_request(self):
+        """Test request API for URL"""
+        response = requests.get(url=self.const.API_URL)
+        assert response.status_code == 200
 
     def verify_categories_are_at_the_home_page(self):
         """Verify that categories are present on the home page"""
@@ -82,3 +88,10 @@ class HomePage(BasePage):
             assert self.is_element_visible(xpath=self.const.CATEGORY_RELAX_IMG_XPATH)
         elif title_button == self.const.CATEGORY_ELECTRO_TITLE_XPATH:
             assert self.is_element_visible(xpath=self.const.CATEGORY_ELECTRO_IMG_XPATH)
+
+    def navigate_to_category_page(self, title_button):
+        """Navigate to the category page by clicking on the category"""
+        self.click(xpath=title_button)  # ToDO: to do difference by category
+
+        from pages.category_page import CategoryPage
+        return CategoryPage(self.driver)
