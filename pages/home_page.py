@@ -88,6 +88,16 @@ class HomePage(BasePage):
             assert self.is_element_visible(xpath=self.const.CATEGORY_RELAX_IMG_XPATH)
         elif title_button == self.const.CATEGORY_ELECTRO_TITLE_XPATH:
             assert self.is_element_visible(xpath=self.const.CATEGORY_ELECTRO_IMG_XPATH)
+        elif title_button == self.const.CATEGORY_FOR_FREE_TITLE_XPATH:
+            assert self.is_element_visible(xpath=self.const.CATEGORY_FOR_FREE_IMG_XPATH)
+        elif title_button == self.const.CATEGORY_HELP_TITLE_XPATH:
+            assert self.is_element_visible(xpath=self.const.CATEGORY_HELP_IMG_XPATH)
+        elif title_button == self.const.CATEGORY_EXCHANGE_TITLE_XPATH:
+            assert self.is_element_visible(xpath=self.const.CATEGORY_EXCHANGE_IMG_XPATH)
+        elif title_button == self.const.CATEGORY_REPAIR_TITLE_XPATH:
+            assert self.is_element_visible(xpath=self.const.CATEGORY_REPAIR_IMG_XPATH)
+        elif title_button == self.const.CATEGORY_VICTORY_TITLE_XPATH:
+            assert self.is_element_visible(xpath=self.const.CATEGORY_VICTORY_IMG_XPATH)
 
     def navigate_to_category_page(self, title_button):
         """Navigate to the category page by clicking on the category"""
