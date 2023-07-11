@@ -1,4 +1,3 @@
-import requests
 from selenium.webdriver.common.by import By
 
 from constants.category_page import CategoryPageConstants
@@ -13,20 +12,6 @@ class CategoryPage(BasePage):
         super().__init__(driver)
         self.const = CategoryPageConstants
         self.home_page = HomePage(self.driver)
-
-    def api_request_sort_by(self):
-        """Send api requests to verify sort feature"""
-
-        for sort in self.const.SORT_TYPES:
-            url_server = self.const.URL_SERVER.format(sort=sort)
-
-            payload = {}
-            headers = {}
-
-            response = requests.request("GET", url_server, headers=headers, data=payload)
-            assert response.status_code == 200
-
-        # ToDo: to come up how to connect this function with driver and use in test
 
     def verify_category_name_is_displayed(self, title_button):
         self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEAD_TITLE_XPATH)
