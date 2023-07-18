@@ -101,7 +101,8 @@ class HomePage(BasePage):
 
     def navigate_to_category_page(self, title_button):
         """Navigate to the category page by clicking on the category"""
-        self.click(xpath=title_button)  # ToDO: to do difference by category
+        self.wait_until_displayed(by=By.XPATH, xpath=title_button)
+        self.click(xpath=title_button)
 
         from pages.category_page import CategoryPage
         return CategoryPage(self.driver)
