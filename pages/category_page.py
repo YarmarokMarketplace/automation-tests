@@ -49,3 +49,9 @@ class CategoryPage(BasePage):
         elif title_button == self.home_page.const.CATEGORY_ELECTRO_TITLE_XPATH:
             assert self.compare_element_text(xpath=self.const.HEAD_TITLE_XPATH,
                                              text=self.home_page.const.CATEGORY_ELECTRO_TITLE_TEXT)
+
+    def verify_pagination_is_displayed_and_clickable(self):
+        """Verify pagination is displayed on the category page, and it's clickable"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEAD_TITLE_XPATH)
+        assert self.is_element_visible(xpath=self.const.PAGINATION)
+        assert self.is_element_clickable(xpath=self.const.PAGINATION)
