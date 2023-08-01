@@ -48,3 +48,25 @@ class TestCategoryPage:
             - verify the pagination is displayed and clickable
         """
         category_page.verify_pagination_is_displayed_and_clickable()
+
+    def test_mar91_breadcrumbs(self, category_page):
+        """
+        - Fixture: navigate to the category page
+        - Steps:
+            - verify the breadcrumbs are visible
+            - navigate to the main page using breadcrumbs
+            - verify the main page is displayed
+        """
+        category_page.verify_breadcrumbs_are_visible()
+        home_page = category_page.navigate_to_home_page_using_breadcrumbs()
+        home_page.verify_categories_are_at_the_home_page()
+
+    # def test_mar157_navigate_to_single_product_page(self, category_page):
+    #     """
+    #     - Fixture: navigate to the category page
+    #     - Steps:
+    #         - navigate to the single product page
+    #         - verify the single product page is displayed
+    #     """
+    #     single_product_page = category_page.navigate_to_single_product_page()
+    #     single_product_page.verify_single_product_page_is_displayed()

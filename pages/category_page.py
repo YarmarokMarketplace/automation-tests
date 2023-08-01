@@ -55,3 +55,25 @@ class CategoryPage(BasePage):
         self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEAD_TITLE_XPATH)
         assert self.is_element_visible(xpath=self.const.PAGINATION)
         assert self.is_element_clickable(xpath=self.const.PAGINATION)
+
+    def verify_breadcrumbs_are_visible(self):
+        """Verify the breadcrumbs are displayed"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEAD_TITLE_XPATH)
+        assert self.is_element_visible(xpath=self.const.BREADCRUMBS)
+
+    def navigate_to_home_page_using_breadcrumbs(self):
+        """Navigate to the home page using breadcrumbs"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.HEAD_TITLE_XPATH)
+        self.click(xpath=self.const.HOME_PAGE_BREADCRUMB)
+
+        return HomePage(self.driver)
+
+    # def navigate_to_single_product_page(self):
+    #     """Navigate to the single product page"""
+    #     self.wait_until_clickable(by=By.XPATH, xpath=self.const.NOTICE)
+    #     self.click(xpath=self.const.NOTICE)
+    #
+    #     from pages.single_product_page import SingleProductPage
+    #     return SingleProductPage(self.driver)
+
+    # ToDo: add single product directions and verification at single product page

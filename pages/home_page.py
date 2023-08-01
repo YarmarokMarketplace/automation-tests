@@ -106,3 +106,4 @@ class HomePage(BasePage):
 
         from pages.category_page import CategoryPage
         return CategoryPage(self.driver)
+
