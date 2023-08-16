@@ -14,7 +14,7 @@ class User:
         """Fill data by random generated text"""
         self.username = f"{random_text(length=5)}"
         self.email = f"{self.username}@mail.com"
-        self.password = f"{self.username}PwD"
+        self.password = f"{self.username}PwD!"
 
     def __repr__(self):
         return f'User:(username={self.username}, email={self.email}@gmail.com, password={self.password})'

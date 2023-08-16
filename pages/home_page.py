@@ -107,3 +107,10 @@ class HomePage(BasePage):
         from pages.category_page import CategoryPage
         return CategoryPage(self.driver)
 
+    def navigate_to_login(self):
+        """Navigate to the login form"""
+        self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGIN_HEADER_BUTTON_XPATH)
+        self.click(xpath=self.const.LOGIN_HEADER_BUTTON_XPATH)
+
+        from pages.registration import Registration
+        return Registration(self.driver)

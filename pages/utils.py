@@ -35,6 +35,7 @@ def random_str():
 
 
 def random_text(length, text=''):
+    """Generate random text"""
     for i in range(length):
         text += ''.join(random_str() + random_num())
     return text

@@ -80,6 +80,11 @@ class BasePage:
         """Find and click on the element by provided xpath"""
         element = self.wait_until_clickable(by=By.XPATH, xpath=xpath).click()
 
+    def clear(self, xpath):
+        """Clear inputs from the field provided by xpath"""
+        field = self.wait_until_clickable(by=By.XPATH, xpath=xpath)
+        field.clear()
+
     def compare_element_text(self, xpath, text, strip=False):
         """Compare element text to provided one"""
         element_text = self.wait_until_displayed(by=By.XPATH, xpath=xpath)
