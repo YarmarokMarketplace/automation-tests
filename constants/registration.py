@@ -20,14 +20,17 @@ class RegistrationConstants:
     CONFIRM_PSW_ERROR_MESSAGE_XPATH = './/p[@id="confirmPassword-helper-text"]'
 
     EMPTY_NAME_ERROR_MESSAGE_TEXT = 'Не забудьте ввести ваше ім’я'
-    SHORT_NAME_ERROR_MESSAGE_TEXT = 'Пароль повинен мати мінімум 8 символів'
+    SHORT_NAME_ERROR_MESSAGE_TEXT = 'Мінімальна довжина 2 символи'
 
     EMAIL_ERROR_MESSAGE_TEXT = 'Введіть коректний email'
     DUPLICATE_EMAIL_ERROR_MESSAGE_TEXT = 'Користувач з такою поштою вже зареєстрований'
 
     EMPTY_PSW_ERROR_MESSAGE_TEXT = 'Не забудьте ввести пароль'
     SHORT_PSW_ERROR_MESSAGE_TEXT = 'Пароль повинен мати мінімум 8 символів'
-    INVALID_PSW_ERROR_MESSAGE_TEXT = 'Пароль має містити хоча б одну велику літеру, одну цифру та спеціальний символ ' \
-                                     '(#._?!@$%^&*-) '
+    INV_PSW_ERROR_TEXT = 'Пароль має містити хоча б одну велику літеру, одну цифру та спеціальний символ (#._?!@$%^&*-)'
 
     INVALID_CONFIRM_PSW_ERROR_MESSAGE_TEXT = 'Введені паролі не збігаються.'
+
+    CLOSE_REGISTRATION_FORM_BUTTON_XPATH = './/button[@class="MuiButtonBase-root MuiIconButton-root ' \
+                                           'MuiIconButton-colorInherit MuiIconButton-sizeMedium ' \
+                                           'css-xdwiov-MuiButtonBase-root-MuiIconButton-root"] '

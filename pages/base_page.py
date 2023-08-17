@@ -1,4 +1,5 @@
 from selenium.common import NoSuchElementException
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -80,10 +81,19 @@ class BasePage:
         """Find and click on the element by provided xpath"""
         element = self.wait_until_clickable(by=By.XPATH, xpath=xpath).click()
 
-    def clear(self, xpath):
-        """Clear inputs from the field provided by xpath"""
+    def clear_field(self, xpath):
+        """Clear inputs in the field using provided xpath"""
         field = self.wait_until_clickable(by=By.XPATH, xpath=xpath)
-        field.clear()
+        field.click()
+        field.send_keys(Keys.CONTROL + "a")
+        field.send_keys(Keys.DELETE)
+
+    def fill_and_clear_fields(self, xpath, value):
+        field = self.wait_until_clickable(by=By.XPATH, xpath=xpath)
+        field.send_keys(value)
+        field.click()
+        field.send_keys(Keys.CONTROL + "a")
+        field.send_keys(Keys.DELETE)
 
     def compare_element_text(self, xpath, text, strip=False):
         """Compare element text to provided one"""
