@@ -9,7 +9,7 @@ class RegistrationConstants:
     SIGN_UP_BUTTON_XPATH = './/button[@id="register-btn"]'
 
     TERMS_OF_USE_XPATH = './/a[@id="rules-link"]'
-    LOGIN_BUTTON_XPATH = './/button[@id="login-redirect"]'
+    LOGIN_BUTTON_IN_REGFORM_XPATH = './/button[@id="login-redirect"]'
 
     TEXT_AFTER_REGISTR_XPATH = './/p[@class="MuiTypography-root MuiTypography-body1 css-16nfqyq-MuiTypography-root"]'
     TEXT_AFTER_REGISTRATION_TEXT = 'Дякуємо за реєстрацію!'

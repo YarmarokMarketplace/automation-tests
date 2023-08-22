@@ -112,5 +112,5 @@ class HomePage(BasePage):
         self.wait_until_displayed(by=By.XPATH, xpath=self.const.LOGIN_HEADER_BUTTON_XPATH)
         self.click(xpath=self.const.LOGIN_HEADER_BUTTON_XPATH)
 
-        from pages.registration import Registration
-        return Registration(self.driver)
+        from pages.login import Login
+        return Login(self.driver)

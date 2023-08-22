@@ -2,10 +2,10 @@ from selenium.webdriver.common.by import By
 
 from constants.registration import RegistrationConstants
 from pages import utils
-from pages.base_page import BasePage
+from pages.login import Login
 
 
-class Registration(BasePage):
+class Registration(Login):
     """Store methods describes home page actions"""
 
     def __init__(self, driver):
@@ -38,7 +38,7 @@ class Registration(BasePage):
     def login_button_in_registration_form_is_clickable(self):
         """Verify Login button is clickable"""
 
-        self.is_element_clickable(xpath=self.const.LOGIN_BUTTON_XPATH)
+        self.is_element_clickable(xpath=self.const.LOGIN_BUTTON_IN_REGFORM_XPATH)
 
     def verify_error_messages(self):
         """Verify name, email, password and confirm password are displayed error messages"""
@@ -106,3 +106,7 @@ class Registration(BasePage):
         """Verify error message about invalid confirmation password is displayed"""
         assert self.compare_element_text(xpath=self.const.CONFIRM_PSW_ERROR_MESSAGE_XPATH,
                                          text=self.const.INVALID_CONFIRM_PSW_ERROR_MESSAGE_TEXT)
+
+    def close_registration_form(self):
+        """Close the registration form"""
+        self.click(xpath=self.const.CLOSE_REGISTRATION_FORM_BUTTON_XPATH)

@@ -10,7 +10,8 @@ class TestRegistration:
 
     @pytest.fixture()
     def registration(self, home_page):
-        registration = home_page.navigate_to_login()
+        login = home_page.navigate_to_login()
+        registration = login.navigate_to_registration()
         return registration
 
     def test_mar20_valid_registration(self, registration, random_user):
