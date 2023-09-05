@@ -1,3 +1,5 @@
+import random
+
 import pytest as pytest
 
 from pages.home_page import HomePage
@@ -30,3 +32,20 @@ def random_user(empty_user):
     """Create random user"""
     empty_user.fill_data()
     return empty_user
+
+
+@pytest.fixture()
+def random_category():
+    """Choose random category from the list"""
+    categories = ["Авто", "Бізнес та послуги", "Безкоштовно", "Дитячий світ", "Дім і сад",
+                  "Допомога", "Електроніка", "Запчастини для транспорту", "Мода і стиль",
+                  "Нерухомість", "Обмін", "Ремонт", "Робота", "Тварини", "Товари для перемоги",
+                  "Хобі, відпочинок і спорт"]
+    return random.choice(categories)
+
+
+@pytest.fixture()
+def random_city():
+    """Choose random city from the list"""
+    cities = ["Київ", "Дніпро", "Харків", "Одеса", "Львів", "Херсон"]
+    return random.choice(cities)

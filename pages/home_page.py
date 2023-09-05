@@ -114,3 +114,10 @@ class HomePage(BasePage):
 
         from pages.login import Login
         return Login(self.driver)
+
+    def navigate_to_create_notice_page(self):
+        """Navigate to page where user can crate a notice"""
+        self.click(self.const.ADD_NOTICE_BUTTON_XPATH)
+
+        from pages.single_product_page import SingleProductPage
+        return SingleProductPage(self.driver)

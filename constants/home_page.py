@@ -82,3 +82,5 @@ class HomePageConstants:
     HOW_TO_SELL_AND_BUY_UKR_TEXT = 'Як продавати й купувати?'
 
     LOGIN_HEADER_BUTTON_XPATH = './/button[@id="acc-text-btn"]'
+
+    ADD_NOTICE_BUTTON_XPATH = './/button[@id="add-advert-btn"]'
