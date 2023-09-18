@@ -24,30 +24,37 @@ class Login(BasePage):
         self.fill_fields(xpath=self.const.LOGIN_EMAIL_FIELD_XPATH, value=user.email)
         self.fill_fields(xpath=self.const.LOGIN_PASSWORD_FIELD_XPATH, value=user.password)
 
-        self.click(xpath=self.const.SAVE_DATA_FOR_LOGIN_CHECKBOX)
+        self.wait_until_clickable(by=By.XPATH, xpath=self.const.LOGIN_BUTTON_XPATH)
         self.click(xpath=self.const.LOGIN_BUTTON_XPATH)
 
-    def verify_username_in_the_header(self):
+    def verify_username_in_the_header(self, user):
         """Verify successful login and username appears in the header"""
 
         self.compare_element_text(xpath=self.const.USERNAME_IN_THE_HEADER_XPATH,
-                                  text=self.const.USERNAME_IN_THE_HEADER_TEXT)
+                                  text=user.usernamename)
 
     def login_with_empty_credentials(self, user):
         """Login with empty credentials"""
         self.fill_and_clear_fields(xpath=self.const.LOGIN_EMAIL_FIELD_XPATH, value=user.email)
         self.fill_and_clear_fields(xpath=self.const.LOGIN_PASSWORD_FIELD_XPATH, value=user.password)
 
-        self.click(xpath=self.const.LOGIN_BUTTON_XPATH)
-
     def verify_error_messages_in_login(self):
         """Verify email and password are displayed error messages"""
 
         assert self.compare_element_text(xpath=self.const.EMAIL_ERROR_MESSAGE_XPATH,
-                                         text=self.const.EMAIL_ERROR_MESSAGE_TEXT)
+                                         text=self.const.EMAIL_EMPT_ERROR_MESSAGE_TEXT)
 
         assert self.compare_element_text(xpath=self.const.PSW_ERROR_MESSAGE_XPATH,
-                                         text=self.const.PSW_ERROR_MESSAGE_TEXT)
+                                         text=self.const.PSW_EMPT_ERROR_MESSAGE_TEXT)
+
+    def verify_error_messages_without_registration(self):
+        """Verify email and password are displayed error messages"""
+
+        assert self.compare_element_text(xpath=self.const.EMAIL_ERROR_MESSAGE_XPATH,
+                                         text=self.const.ERROR_WITHOURT_REGISTRATION_TEXT)
+
+        assert self.compare_element_text(xpath=self.const.PSW_ERROR_MESSAGE_XPATH,
+                                         text=self.const.ERROR_WITHOURT_REGISTRATION_TEXT)
 
     def navigate_to_forget_password_form(self, user):
         """Click the forget password"""

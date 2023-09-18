@@ -1,5 +1,5 @@
 class BaseConstants:
-    URL = 'https://deploy-preview-14--yarmarok-test.netlify.app/'  # https://yarmarok.netlify.app/#/
+    URL = 'https://main--yarmarok-test.netlify.app/#/'  # https://yarmarok.netlify.app/#/
 
     # ToDo: not to forget to change URL for production URL
 

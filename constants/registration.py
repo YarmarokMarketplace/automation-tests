@@ -22,12 +22,13 @@ class RegistrationConstants:
     EMPTY_NAME_ERROR_MESSAGE_TEXT = 'Не забудьте ввести ваше ім’я'
     SHORT_NAME_ERROR_MESSAGE_TEXT = 'Мінімальна довжина 2 символи'
 
-    EMAIL_ERROR_MESSAGE_TEXT = 'Введіть коректний email'
+    EMAIL_ERROR_MESSAGE_TEXT = 'Некоректна електронна адреса. Перевірте правильність введення електронної адреси.'
     DUPLICATE_EMAIL_ERROR_MESSAGE_TEXT = 'Користувач з такою поштою вже зареєстрований'
 
     EMPTY_PSW_ERROR_MESSAGE_TEXT = 'Не забудьте ввести пароль'
     SHORT_PSW_ERROR_MESSAGE_TEXT = 'Пароль повинен мати мінімум 8 символів'
-    INV_PSW_ERROR_TEXT = 'Пароль має містити хоча б одну велику літеру, одну цифру та спеціальний символ (#._?!@$%^&*-)'
+    INV_PSW_ERROR_TEXT = 'Пароль має містити лише латинські літери, хоча б одну велику літеру, одну цифру та ' \
+                         'спеціальний символ (#._?!@$%^&*-)'
 
     INVALID_CONFIRM_PSW_ERROR_MESSAGE_TEXT = 'Введені паролі не збігаються.'
 

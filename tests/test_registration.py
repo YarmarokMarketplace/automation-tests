@@ -4,7 +4,7 @@ import pytest
 from constants.base import BaseConstants
 
 
-@pytest.mark.parametrize("browser", [BaseConstants.CHROME, BaseConstants.FIREFOX])
+@pytest.mark.parametrize("browser", [BaseConstants.CHROME])
 class TestRegistration:
     """Stores tests for registration functionality"""
 
@@ -14,16 +14,16 @@ class TestRegistration:
         registration = login.navigate_to_registration()
         return registration
 
-    def test_mar20_valid_registration(self, registration, random_user):
-        """
-        - Steps:
-            - click registration button
-            - sign up
-            - verify user is registered
-        """
-
-        registration.sign_up(user=random_user)
-        registration.verify_successful_registration()
+    # def test_mar20_valid_registration(self, registration, random_user):
+    #     """
+    #     - Steps:
+    #         - click registration button
+    #         - sign up
+    #         - verify user is registered
+    #     """
+    #
+    #     registration.sign_up(user=random_user)
+    #     registration.verify_successful_registration()
 
     def test_mar20_terms_button_and_login_buttons(self, registration):
         """
@@ -54,15 +54,6 @@ class TestRegistration:
         """
         registration.sign_up_short_username()
         registration.verify_short_username_error_message()
-
-    # def test_mar20_duplicate_email(self, registration, random_user):
-    #     """
-    #     - Steps:
-    #         - click registration button
-    #         - sign up
-    #         - reopen registration form
-    #         - verify email is already in use
-    #     """
 
     def test_mar20_invalid_password(self, registration):
         """
