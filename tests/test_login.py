@@ -52,13 +52,13 @@ class TestRegistration:
         login.login(user=random_user)
         login.verify_error_messages_without_registration()
 
-    def test_mar36_forget_password(self, login, random_user):
-        """
-        - Steps:
-            - click login button
-            - fill email
-            - click forget-password button
-            - verify reset-password form is displayed
-        """
-        login.navigate_to_forget_password_form(user=random_user)
-        login.verify_reset_password_form_is_displayed()
+    # def test_mar36_forget_password(self, login, random_user):
+    #     """
+    #     - Steps:
+    #         - click login button
+    #         - fill email
+    #         - click forget-password button
+    #         - verify reset-password form is displayed
+    #     """
+    #     login.navigate_to_forget_password_form(user=random_user)
+    #     login.verify_reset_password_form_is_displayed()

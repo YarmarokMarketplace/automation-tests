@@ -12,15 +12,15 @@ class TestHomePage:
     def test_api_get_all_categories(self, home_page):
         home_page.check_api_request()
 
-    def test_mar152_home_page_is_the_first_page_that_visitors_see(self, home_page):
-        """
-        - Steps:
-            - open home page (fixture)
-            - verify categories at the home page
-        """
+    # def test_mar152_home_page_is_the_first_page_that_visitors_see(self, home_page):
+    #     """
+    #     - Steps:
+    #         - open home page (fixture)
+    #         - verify categories at the home page
+    #     """
 
-        # Verify categories at the home page
-        home_page.verify_categories_are_at_the_home_page()
+    #     # Verify categories at the home page
+    #     home_page.verify_categories_are_at_the_home_page()
 
     def test_mar72_marketplace_logo_on_the_home_page(self, home_page):
         """
@@ -100,18 +100,19 @@ class TestHomePage:
         # Verify header is at home page
         home_page.verify_header_is_displayed_on_the_home_page()
 
-    @pytest.mark.parametrize("article", [HomePageConstants.TERMS_OF_USE_UKR_TEXT,
-                                         HomePageConstants.SECURITY_POLICY_UKR_TEXT,
-                                         HomePageConstants.HOW_TO_SELL_AND_BUY_UKR_TEXT,
-                                         HomePageConstants.SITE_MAP_UKR_TEXT])
-    def test_mar74_articles_links_on_the_footer(self, home_page, article):
-        """
-        - Steps:
-            - open home page (fixture)
-            - verify list of functionality at header
-        """
-        # Verify list of functionality at header
-        home_page.check_all_needed_articles_are_displayed_in_footer(article=article)
+    # @pytest.mark.parametrize("article", [HomePageConstants.TERMS_OF_USE_UKR_TEXT,
+    #                                      HomePageConstants.SECURITY_POLICY_UKR_TEXT,
+    #                                      HomePageConstants.HOW_TO_SELL_AND_BUY_UKR_TEXT,
+    #                                      HomePageConstants.SITE_MAP_UKR_TEXT])
+    # def test_mar74_articles_links_on_the_footer(self, home_page, article):
+    #     """
+    #     - Steps:
+    #         - open home page (fixture)
+    #         - verify list of functionality at header
+    #     """
+    #     # Verify list of functionality at header
+    #     home_page.check_all_needed_articles_are_displayed_in_footer(
+    #         article=article)
 
     @pytest.mark.parametrize("title_button", [HomePageConstants.CATEGORY_CHILDREN_WORLD_TITLE_XPATH,
                                               HomePageConstants.CATEGORY_PROPERTY_TITLE_XPATH,

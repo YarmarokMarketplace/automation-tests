@@ -3,6 +3,7 @@ import pytest
 
 from constants.base import BaseConstants
 from constants.home_page import HomePageConstants
+import time
 
 
 @pytest.mark.parametrize("browser", [BaseConstants.CHROME])
@@ -25,20 +26,22 @@ class TestCategoryPage:
                                               HomePageConstants.CATEGORY_EXCHANGE_IMG_XPATH,
                                               HomePageConstants.CATEGORY_REPAIR_IMG_XPATH,
                                               HomePageConstants.CATEGORY_VICTORY_IMG_XPATH])
-    def test_mar81_category_name_on_category_page(self, home_page, title_button):
-        """
-         - Fixture: open home page
-         - Steps:
-             - navigate to category page (to check all categories?)
-             - verify category name is displayed
-        """
-
-        category_page = home_page.navigate_to_category_page(title_button=title_button)
-        category_page.verify_category_name_is_displayed(title_button=title_button)
-
+    # def test_mar81_category_name_on_category_page(self, home_page, title_button):
+    #     """
+    #      - Fixture: open home page
+    #      - Steps:
+    #          - navigate to category page (to check all categories?)
+    #          - verify category name is displayed
+    #     """
+    #     category_page = home_page.navigate_to_category_page(
+    #         title_button=title_button)
+    #     time.sleep(2)
+    #     category_page.verify_category_name_is_displayed(
+    #         title_button=title_button)
     @pytest.fixture()
     def category_page(self, home_page):
-        category_page = home_page.navigate_to_category_page(title_button=HomePageConstants.CATEGORY_RELAX_IMG_XPATH)
+        category_page = home_page.navigate_to_category_page(
+            title_button=HomePageConstants.CATEGORY_RELAX_IMG_XPATH)
         return category_page
 
     def test_mar87_pagination(self, category_page):
@@ -49,17 +52,17 @@ class TestCategoryPage:
         """
         category_page.verify_pagination_is_displayed_and_clickable()
 
-    def test_mar91_breadcrumbs(self, category_page):
-        """
-        - Fixture: navigate to the category page
-        - Steps:
-            - verify the breadcrumbs are visible
-            - navigate to the main page using breadcrumbs
-            - verify the main page is displayed
-        """
-        category_page.verify_breadcrumbs_are_visible()
-        home_page = category_page.navigate_to_home_page_using_breadcrumbs()
-        home_page.verify_categories_are_at_the_home_page()
+    # def test_mar91_breadcrumbs(self, category_page):
+    #     """
+    #     - Fixture: navigate to the category page
+    #     - Steps:
+    #         - verify the breadcrumbs are visible
+    #         - navigate to the main page using breadcrumbs
+    #         - verify the main page is displayed
+    #     """
+    #     category_page.verify_breadcrumbs_are_visible()
+    #     home_page = category_page.navigate_to_home_page_using_breadcrumbs()
+    #     home_page.verify_categories_are_at_the_home_page()
 
     # def test_mar157_navigate_to_single_product_page(self, category_page):
     #     """

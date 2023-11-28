@@ -3,7 +3,7 @@ import requests
 
 def test_mar84_sort_products_by_price_and_newness_api():
     """API requests for testing sorting by price and newness"""
-    url_server = 'https://yarmarok-pr-4.onrender.com/api/notices?page=1&limit=9&sort={sort}'
+    url_server = 'https://yarmarok.onrender.com/api/notices?page=1&limit=9&sort={sort}'
 
     sort_types = ['newest', 'oldest', 'expensive', 'cheapest']
 
@@ -14,13 +14,14 @@ def test_mar84_sort_products_by_price_and_newness_api():
         payload = {}
         headers = {}
 
-        response = requests.request("GET", url_server, headers=headers, data=payload)
+        response = requests.request(
+            "GET", url_server, headers=headers, data=payload)
         assert response.status_code == 200
 
 
 def test_mar176_filter_products_by_state_of_item_api():
     """API requests for testing filtering by state of item - new, used"""
-    url_server = 'https://yarmarok-pr-4.onrender.com/api/notices?page=1&limit=9goodtype={goodtype}'
+    url_server = 'https://yarmarok.onrender.com/api/notices?page=1&limit=9goodtype={goodtype}'
     goodtype = ['used', 'new']
 
     print("=======GET /filter state=======")
@@ -30,13 +31,14 @@ def test_mar176_filter_products_by_state_of_item_api():
         payload = {}
         headers = {}
 
-        response = requests.request("GET", url_server, headers=headers, data=payload)
+        response = requests.request(
+            "GET", url_server, headers=headers, data=payload)
         assert response.status_code == 200
 
 
 def test_mar176_filter_products_by_price_api():
     """API requests for testing filtering by state of item - new, used"""
-    url_server = 'https://yarmarok-pr-4.onrender.com/api/notices?page=1&limit=9priceRange={price_range}'
+    url_server = 'https://yarmarok.onrender.com/api/notices?page=1&limit=9priceRange={price_range}'
     price_range = ['0-500', '300-1000', '100-200']
 
     print("=======GET /filter price=======")
@@ -46,5 +48,6 @@ def test_mar176_filter_products_by_price_api():
         payload = {}
         headers = {}
 
-        response = requests.request("GET", url_server, headers=headers, data=payload)
+        response = requests.request(
+            "GET", url_server, headers=headers, data=payload)
         assert response.status_code == 200
