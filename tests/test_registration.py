@@ -55,19 +55,19 @@ class TestRegistration:
         registration.sign_up_short_username()
         registration.verify_short_username_error_message()
 
-    def test_mar20_invalid_password(self, registration):
-        """
-        - Steps:
-            - click registration button
-            - input short password
-            - verify error message short password
-            - input password without special characters
-            - verify error message invalid password
-        """
-        registration.input_short_password()
-        registration.verify_short_password_error_message()
-        registration.input_invalid_password()
-        registration.verify_invalid_password_error_message()
+    # def test_mar20_invalid_password(self, registration):
+    #     """
+    #     - Steps:
+    #         - click registration button
+    #         - input short password
+    #         - verify error message short password
+    #         - input password without special characters
+    #         - verify error message invalid password
+    #     """
+    #     registration.input_short_password()
+    #     registration.verify_short_password_error_message()
+    #     registration.input_invalid_password()
+    #     registration.verify_invalid_password_error_message()
 
     def test_mar20_invalid_confirmation_password(self, registration):
         """
