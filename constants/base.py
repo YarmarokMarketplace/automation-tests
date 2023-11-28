@@ -1,7 +1,7 @@
 class BaseConstants:
     # https://yarmarok.netlify.app/#/
     # URL = 'https://main--yarmarok-test.netlify.app/#/'
-    URL = 'http://localhost:8080/'
+    URL = 'https://yarmarok.netlify.app'
 
     # ToDo: not to forget to change URL for production URL
 

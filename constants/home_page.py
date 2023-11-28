@@ -1,7 +1,7 @@
 class HomePageConstants:
     """Stores  constants related to home page"""
 
-    API_URL = "http://localhost:8080/"
+    API_URL = "https://yarmarok.netlify.app"
 
     CATEGORIES_XPATH = './/h4[@class="MuiTypography-root MuiTypography-h4 css-ob4nwx-MuiTypography-root"]'
     CATEGORIES_TEXT = 'Головні рубрики'
