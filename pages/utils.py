@@ -1,8 +1,8 @@
 import random
 import string
+# from selenium.webdriver.firefox.options import Options
 
 from selenium import webdriver
-# from selenium.webdriver.firefox.options import Options
 
 from selenium.webdriver.chrome.service import Service
 
@@ -16,8 +16,10 @@ def create_driver(browser):
     if browser == BaseConstants.CHROME:
         service = Service(ChromeDriverManager().install())
         options = webdriver.ChromeOptions()
+        options.add_argument("--no-sandbox")
         driver = webdriver.Chrome(service=service, options=options)
-        driver.maximize_window()
+        # driver.maximize_window()
+        driver.set_window_size(1920, 1080)
     elif browser == BaseConstants.FIREFOX:
         options = webdriver.FirefoxOptions()
         service = Service(GeckoDriverManager().install())
