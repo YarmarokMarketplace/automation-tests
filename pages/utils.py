@@ -16,10 +16,15 @@ def create_driver(browser):
     if browser == BaseConstants.CHROME:
         service = Service(ChromeDriverManager().install())
         options = webdriver.ChromeOptions()
+        options.add_argument("--headless")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--remote-debugging-port=9222")
         options.add_argument("--no-sandbox")
         driver = webdriver.Chrome(service=service, options=options)
         # driver.maximize_window()
-        driver.set_window_size(1920, 1080)
+        # driver.set_window_size(1920, 1080)
     elif browser == BaseConstants.FIREFOX:
         options = webdriver.FirefoxOptions()
         service = Service(GeckoDriverManager().install())
