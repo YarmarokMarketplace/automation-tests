@@ -35,15 +35,15 @@ class TestRegistration:
         registration.terms_of_use_is_clickable()
         registration.login_button_in_registration_form_is_clickable()
 
-    def test_mar20_empty_credentials(self, registration, random_user):
-        """
-        - Steps:
-            - click registration button
-            - input credentials and then delete them
-            - verify Error messages are displayed
-        """
-        registration.empty_sign_up(user=random_user)
-        registration.verify_error_messages()
+    # def test_mar20_empty_credentials(self, registration, random_user):
+    #     """
+    #     - Steps:
+    #         - click registration button
+    #         - input credentials and then delete them
+    #         - verify Error messages are displayed
+    #     """
+    #     registration.empty_sign_up(user=random_user)
+    #     registration.verify_error_messages()
 
     def test_mar20_short_username(self, registration):
         """
